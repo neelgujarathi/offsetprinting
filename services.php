@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OFFSET PRINTING PRESS E-COMMERCE</title>
+    
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                    <i class="fas fa-clock"></i>
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="sms.php">Proof Section</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+               
+            </nav>
+        </div>
+    </header>
+    
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            Services </h2>
+                        <p class="inner-page-para mt-2">
+                            A satisfied customer is the best business strategy of all.</p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Services</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <div class="w3l-services-1 py-5" id="grids-3">
+        <div class="container py-md-5 py-2">
+            <!--/row-1-->
+            <div class="row mb-5 pb-lg-4">
+                <div class="services-1-right col-lg-6 mt-lg-0 mt-md-5 mt-4 pe-lg-5">
+                    <div class="title-content-two text-left">
+                        <h6 class="title-subw3hny mb-1">Services Info</h6>
+                        <h3 class="title-w3l mb-3">Our Three Main Services</h3>
+                    </div>
+                    <p class="">We provide <br>1. Customize Design to our customers.<br>2. Our products are Quality products.<br>3. Home Delivery service. </p>
+					<br><br>
+						<tr>
+							<center><h5> <strong><u><i>Customer's Feedback:-</i></u></strong> </h5></center><br>
+                        </tr>
+
+			
+              <?php
+					include "configure.php";
+					$add  = mysqli_query($conn, "select * from feedbackform") or die(mysqli_error($conn));
+					?>
+					<tbody>
+						<?php
+						$counter = 0;
+						while ($row = mysqli_fetch_array($add)) 
+						{
+							extract($row);
+						?>
+							<tr>
+								<td scope="row"></td>
+                                <td><?php echo $row['Name']; ?></td>
+								<td><?php echo "<br>". $row['rating'];    echo "&nbsp;&nbsp;&nbsp;Rating"; ?></td>
+                                <img src="assets/images/star1.jpg" width="100" height="50">
+								<td><?php echo "<br>".  $row['feedback']; ?></td><br><br><br>
+							</tr>
+						<?php } ?>
+
+					</tbody>
+            </table>
+                </div>
+                <div class="col-lg-6 p5-lg-4 services-1-left">
+                    <img src="assets/images/img.jpg" alt="" width="700" height="700" class="img-fluid radius-image">
+                </div>
+            </div>
+          
+
+        </div>
+    </div>
+    
+    <section class="w3l-services-2" id="services1">
+        <div class="midd-w3 py-5">
+            <div class="container py-lg-5 py-md-3">
+                <div class="serve-title-header text-center mx-auto">
+                    <h6 class="title-subw3hny mb-1">What We Do</h6>
+                    <h3 class="title-w3l mb-3">Innovative Services & Technology</h3>
+                    <p class="abinfo-para">We build product by using new technologies. We give something to our customers. Every time we try to give someting innovative to our customers.</p>
+                </div>
+                <div class="grids-of-5 row mt-5 text-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="grids5-info">
+                            <a href="#service" class="d-block zoom"><img src="assets/images/off.jpg" alt="" width="350" height="370"></a>
+                            <div class="blog-info">
+                                <h4><a href="#service">Offset Machine</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-sm-5 mt-4">
+                        <div class="grids5-info">
+                            <a href="#service" class="d-block zoom"><img src="assets/images/cmyk.jpg" alt="" width="350" height="370"></a>
+                            <div class="blog-info">
+                                <h4><a href="#service">
+                                        CMYK Machine</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="grids5-info">
+                            <a href="#service" class="d-block zoom"><img src="assets/images/paper.jpeg" alt="" width="350" height="370"></a>
+                            <div class="blog-info">
+                                <h4><a href="#service">
+                                       Paper cutting Machine
+                                    </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="pricing-section py-5" id="pricing">
+        <div class="container pricing-style-w3ls py-lg-5 py-md-4">
+            <div class="title-content text-center">
+                <h6 class="title-subw3hny mb-1">Service Plans</h6>
+                <h3 class="title-w3l mb-5">Special Pricing</h3>
+            </div>
+            <div class="row pricing-chart mt-4">
+			                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="plan popular active">
+                        <h3 class="pop-plan">Offer On Visiting Cards</h3>
+                        <div class="price mb-4">
+                            <span class="dollar">₹</span>
+                            <span class="amount" data-dollar-amount="49">2100</span>
+
+                            <p class="perm">Upto 2 Months</p>
+                        </div>
+                        <ul class="pricinghny-inf">
+                            <ul class="pricinghny-inf">
+                                <li>
+                                    Both side Visiting card Printing</li>
+                                <li>With Spot limination
+                                </li>
+                            <li class="disable">
+                                    Round cut </li>
+                               <li class="disable">Think Card</li>
+                                <li class="disable">Glossy Limination</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                        </ul>
+                        <a class="btn btn-primary btn-style mt-lg-5 mt-4" href="#url">Choose Plan </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="plan popular active">
+                        <h3 class="pop-plan">Offer On Indutrial Brocher</h3>
+                        <div class="price mb-4">
+                            <span class="dollar">₹</span>
+                            <span class="amount" data-dollar-amount="99">8030</span>
+
+                            <p class="perm">Upto 2 Month</p>
+                        </div>
+                        <ul class="pricinghny-inf">
+                            <ul class="pricinghny-inf">
+                                <li>
+                                    Four color Printing</li>
+                                <li>Glossy Limination
+                                </li>
+                                <li>
+                                   Round cut on corner</li>
+                                <li>Both side printing</li>
+                                <li>Card Board Paper</li>
+                                <li>24/7 Support</li>
+                            </ul>
+                        </ul>
+                        <a class="btn btn-primary btn-style mt-lg-5 mt-4" href="#url">Choose Plan </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="plan popular active">
+                        <h3 class="pop-plan">Offer On Doctor File</h3>
+                        <div class="price mb-4">
+                            <span class="dollar">₹</span>
+                            <span class="amount" data-dollar-amount="69">21000</span>
+
+                            <p class="perm">Upto 2 Month</p>
+                        </div>
+                        <ul class="pricinghny-inf">
+                            <li>
+                                For 1000 quatity</li>
+                            <li>With Clips
+                            </li>
+                            <li>
+                                Glossy Limination</li>
+                              <li class="disable">Non - Teriable</li>
+                            <li class="disable">Square cut on corner</li>
+                            <li>24/7 Support</li>
+                        </ul>
+                        <a class="btn btn-primary btn-style mt-lg-5 mt-4" href="#url">Choose Plan </a>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+  
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container">
+                <div class="row footer-top-29">
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-1 pe-lg-5">
+
+                    </div>
+                    <div class="col-lg-5 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-3">
+                    </div>
+                    <center>
+                    <div class="col-lg-4 col-md-6 footer-list-29 mt-lg-0 mt-4">
+                        <div class="main-social-footer-29">
+                            <a href="#facebook" class="facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#twitter" class="twitter"><span class="fab fa-twitter"></span></a>
+                            <a href="#instagram" class="instagram"><span class="fab fa-instagram"></span></a>
+                            <a href="#linkd" class="linkd"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </center>
+                </div>
+            </div>
+        </div>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
